@@ -14,8 +14,9 @@
 //***********************************//
 //*************DEFINE****************//
 //***********************************//
-#define TAG_SOUNDS_KILL_CSGO "[AIO SOUNDS KILL] - "
-#define MAX_NUM_KILLS_CSGO 100
+#define TAG_SOUNDS_KILL_CSGO 				"[AIO SOUNDS KILL] - "
+#define PLUGIN_VERSION_SOUNDS_KILL_CSGO		"1.0.0"
+#define MAX_NUM_KILLS_CSGO 					100
 
 //***********************************//
 //***********PARAMETERS**************//
@@ -76,7 +77,7 @@ new C_consecutive_headshots[MAXPLAYERS+1];
 /***********************************************************/
 public OnPluginStartSoundsKillCsgo()
 {
-	CreateConVar("aio_sounds_kill_version", PLUGIN_VERSION, "Version", CVARS);
+	CreateConVar("aio_sounds_kill_version", PLUGIN_VERSION_SOUNDS_KILL_CSGO, "Version", CVARS);
 	
 	cvar_active_sounds_kill_csgo 					= CreateConVar("active_sounds_kill_csgo",  				"0", 					"Enable/Disable Sounds Kill", 			DEFAULT_FLAGS, 		true, 0.0, 		true, 1.0);
 	cvar_active_sounds_kill_csgo_dev				= CreateConVar("active_sounds_kill_csgo_dev", 			"0", 					"Enable/Disable Sounds Kill Dev Mod", 	DEFAULT_FLAGS, 		true, 0.0, 		true, 1.0);
